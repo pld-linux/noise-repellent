@@ -1,0 +1,12 @@
+diff -dur noise-repellent-60167c09fc51242101a041c9d6642bc92fdabcbb.orig/meson.build noise-repellent-60167c09fc51242101a041c9d6642bc92fdabcbb/meson.build
+--- noise-repellent-60167c09fc51242101a041c9d6642bc92fdabcbb.orig/meson.build	2018-09-23 14:58:55.000000000 +0200
++++ noise-repellent-60167c09fc51242101a041c9d6642bc92fdabcbb/meson.build	2018-10-03 13:31:11.000000000 +0200
+@@ -20,7 +20,7 @@
+ cflags = ['-msse','-msse2','-mfpmath=sse','-ffast-math','-fomit-frame-pointer','-fno-finite-math-only']
+ 
+ #install folder
+-install_folder = 'nrepel.lv2'
++install_folder = join_paths(get_option('libdir'), 'lv2', 'nrepel.lv2')
+ 
+ #get the build operating system and configure install path and shared object extension
+ current_os = build_machine.system()
