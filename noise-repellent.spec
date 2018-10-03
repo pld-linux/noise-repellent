@@ -17,6 +17,7 @@ BuildRequires:	fftw3-devel
 BuildRequires:	lv2-devel
 BuildRequires:	meson
 BuildRequires:	ninja
+BuildRequires:	rpmbuild(macros) >= 1.726
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautoprovfiles	%{_libdir}/lv2
@@ -82,5 +83,3 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_libdir}/lv2/nrepel.lv2
 %{_libdir}/lv2/nrepel.lv2/*.ttl
 %attr(755,root,root) %{_libdir}/lv2/nrepel.lv2/*.so
-BuildRequires:  rpmbuild(macros) >= 1.726
-
